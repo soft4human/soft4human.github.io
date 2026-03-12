@@ -1,89 +1,183 @@
 <html>
+
 <head>
 	<title>UFM Changelog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
+		:root {
+			--bg: #f7f8fa;
+			--card-bg: #ffffff;
+			--text: #2a2a2a;
+			--subtle-text: #6b6b6b;
+			--accent: #4a7afe;
+			--radius: 14px;
+			--shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+		}
+
 		body {
-			font-family: helvetica;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+			background: var(--bg);
+			color: var(--text);
+			margin: 0;
+			padding: 24px;
+			line-height: 1.6;
 		}
+
+		h1 {
+			font-size: 24px;
+			margin-bottom: 4px;
+		}
+
 		h4 {
-			margin-block-end: 0;
+			margin-top: 0;
+			color: var(--subtle-text);
+			font-weight: 500;
 		}
+
+		li {
+			margin-bottom: 10px;
+			padding-left: 6px;
+		}
+
 		ul {
-			line-height: 2;
-			margin-block-start: 0;
-			margin-block-end: 0;
+			padding-left: 20px;
+			margin: 0;
+		}
+
+		.card {
+			background: var(--card-bg);
+			padding: 20px 24px;
+			border-radius: var(--radius);
+			box-shadow: var(--shadow);
+			margin-top: 20px;
+		}
+
+		.container {
+			max-width: 700px;
+			margin: auto;
+		}
+
+		.version-tag {
+			background: var(--accent);
+			border-radius: 12px;
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+			color: white;
+			display: inline-block;
+			font-size: 12px;
+			font-weight: 600;
+			margin-bottom: 10px;
+			padding: 3px 6px;
+		}
+
+		/* Mobile adjustments */
+		@media (max-width: 600px) {
+			body {
+				padding: 16px;
+			}
+
+			.card {
+				padding: 10px;
+			}
 		}
 	</style>
 </head>
+
 <body>
-	<h1>Unbeatable Football Manager Changelog</h1>
-	<h4>1.5.0</h4>
-	<ul>
-		<li>5 leagues added: Belgian League 1, Polish League 1, Portuguese League 1, Romanian League 1, Swedish League 1</li>
-		<li>Added an additional tier to the team reputation hierarchy</li>
-		<li>UI improved</li>
-		<li>Minor improvements and bug fixes</li>
-	</ul>
-	<h4>1.4.0</h4>
-	<ul>
-		<li>Added the ability to edit team names</li>
-		<li>Team lineup screen now displays goals scored by each player</li>
-		<li>Players' nationalities now appear in the match report</li>
-		<li>Fan sentiment changes are now shown on the match screen</li>
-		<li>Introduced a team trophy screen</li>
-		<li>New award added: "League Best Scorer" for players</li>
-		<li>Improved design</li>
-		<li>Minor improvements and bug fixes</li>
-	</ul>
-	<h4>1.3.0</h4>
-	<ul>
-		<li>Android 15 support added</li>
-		<li>Match Screen: team vs team statistics added</li>
-		<li>History Screen: filter by tournament added</li>
-		<li>Game balance improved: morale drop of a player increased if his contract ends this season</li>
-		<li>Australia added to the possible nationalities of the players</li>
-		<li>Minor improvements</li>
-	</ul>
-	<h4>1.2.1</h4>
-	<ul>
-		<li>Player Screen: "Salary per Month" row added</li>
-		<li>Player Screen: the contract end date is now highlighted in red if the contract ends this season</li>
-		<li>Match Screen: "first leg result" row added for championship games</li>
-		<li>Scotland and Romania added to the possible nationalities of the players</li>
-		<li>Minor improvements</li>
-	</ul>
-	<h4>1.2.0</h4>
-	<ul>
-		<li>Game balance improved: energy drop for players decreased</li>
-		<li>Bug fixed related to the lack of indication of disabled buttons controls</li>
-		<li>Minor improvements</li>
-	</ul>
-	<h4>1.1.3</h4>
-	<ul>
-		<li>Minor improvements</li>
-	</ul>
-	<h4>1.1.2</h4>
-	<ul>
-		<li>Long press action leading to the Player Screen is now available on the Squad Selection Screen</li>
-		<li>Animation has been added to the buttons</li>
-		<li>Minor improvements</li>
-	</ul>
-	<h4>1.1.1</h4>
-	<ul>
-		<li>Bug fixed related to random app crashes on some devices in case the app was in the background and then reopened again</li>
-		<li>Minor improvements</li>
-	</ul>
-	<h4>1.1.0</h4>
-	<ul>
-		<li>Autosave is implemented</li>
-		<li>Improved Home Screen menu design</li>
-		<li>Implemented redirect to the News Screen on news appearance</li>
-		<li>New design for buttons</li>
-		<li>Minor fixes</li>
-	</ul>
-	<h4>1.0.0</h4>
-	<ul>
-		<li>Initial release</li>
-	</ul>
+	<div class="container">
+		<h1>Unbeatable Football Manager</h1>
+		<h4>Changelog</h4>
+
+		<div class="card">
+			<span class="version-tag">v1.5.0</span>
+			<ul>
+				<li>5 leagues added: Belgian League 1, Polish League 1, Portuguese League 1, Romanian League 1, Swedish
+					League 1</li>
+				<li>Added an additional tier to the team reputation hierarchy</li>
+				<li>UI improved</li>
+				<li>Minor improvements and bug fixes</li>
+			</ul>
+		</div>
+		<div class="card">
+			<span class="version-tag">v1.4.0</span>
+			<ul>
+				<li>Added the ability to edit team names</li>
+				<li>Team lineup screen now displays goals scored by each player</li>
+				<li>Players' nationalities now appear in the match report</li>
+				<li>Fan sentiment changes are now shown on the match screen</li>
+				<li>Introduced a team trophy screen</li>
+				<li>New award added: "League Best Scorer" for players</li>
+				<li>Improved design</li>
+				<li>Minor improvements and bug fixes</li>
+			</ul>
+		</div>
+		<div class="card">
+			<span class="version-tag">v1.3.0</span>
+			<ul>
+				<li>Android 15 support added</li>
+				<li>Match Screen: team vs team statistics added</li>
+				<li>History Screen: filter by tournament added</li>
+				<li>Game balance improved: morale drop of a player increased if his contract ends this season</li>
+				<li>Australia added to the possible nationalities of the players</li>
+				<li>Minor improvements</li>
+			</ul>
+		</div>
+		<div class="card">
+			<span class="version-tag">v1.2.1</span>
+			<ul>
+				<li>Player Screen: "Salary per Month" row added</li>
+				<li>Player Screen: the contract end date is now highlighted in red if the contract ends this season</li>
+				<li>Match Screen: "first leg result" row added for championship games</li>
+				<li>Scotland and Romania added to the possible nationalities of the players</li>
+				<li>Minor improvements</li>
+			</ul>
+		</div>
+		<div class="card">
+			<span class="version-tag">v1.2.0</span>
+			<ul>
+				<li>Game balance improved: energy drop for players decreased</li>
+				<li>Bug fixed related to the lack of indication of disabled buttons controls</li>
+				<li>Minor improvements</li>
+			</ul>
+		</div>
+		<div class="card">
+			<span class="version-tag">v1.1.3</span>
+			<ul>
+				<li>Minor improvements</li>
+			</ul>
+		</div>
+		<div class="card">
+			<span class="version-tag">v1.1.2</span>
+			<ul>
+				<li>Long press action leading to the Player Screen is now available on the Squad Selection Screen</li>
+				<li>Animation has been added to the buttons</li>
+				<li>Minor improvements</li>
+			</ul>
+		</div>
+		<div class="card">
+			<span class="version-tag">v1.1.1</span>
+			<ul>
+				<li>Bug fixed related to random app crashes on some devices in case the app was in the background and then
+					reopened again</li>
+				<li>Minor improvements</li>
+			</ul>
+		</div>
+		<div class="card">
+			<span class="version-tag">v1.1.0</span>
+			<ul>
+				<li>Autosave is implemented</li>
+				<li>Improved Home Screen menu design</li>
+				<li>Implemented redirect to the News Screen on news appearance</li>
+				<li>New design for buttons</li>
+				<li>Minor fixes</li>
+			</ul>
+		</div>
+		<div class="card">
+			<span class="version-tag">v1.0.0</span>
+			<ul>
+				<li>Initial release</li>
+			</ul>
+		</div>
+	</div>
 </body>
+
 </html>
